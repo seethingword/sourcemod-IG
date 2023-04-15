@@ -94,7 +94,7 @@ public void OnPluginStart()
 	RegConsoleCmd("timeleft", Command_Timeleft);
 	RegConsoleCmd("nextmap", Command_Nextmap);
 	RegConsoleCmd("motd", Command_Motd);
-	RegConsoleCmd("ff", Command_FriendlyFire);
+	//RegConsoleCmd("ff", Command_FriendlyFire);
 	
 	g_Cvar_TimeleftInterval.AddChangeHook(ConVarChange_TimeleftInterval);
 
@@ -252,12 +252,12 @@ public Action Command_Motd(int client, int args)
 	return Plugin_Handled;
 }
 
-public Action Command_FriendlyFire(int client, int args)
+/* public Action Command_FriendlyFire(int client, int args)
 {
 	ShowFriendlyFire(client, PRINT_TO_ONE);
 
 	return Plugin_Handled;
-}
+} */
 
 public void OnClientSayCommand_Post(int client, const char[] command, const char[] sArgs)
 {
